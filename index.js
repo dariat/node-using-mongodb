@@ -15,3 +15,10 @@ app.get('/', (req, res) =>
 app.listen(PORT, () => 
     console.log(`Your server is running on port ${PORT}`)
 );
+
+//  MongoDB connection 
+const mongoose = require('mongoose')
+var promise = mongoose.connect('mongodb://localhost:27017/productsdb', {
+    useNewUrlParser: true, 
+    useUnifiedTopology: true
+});
